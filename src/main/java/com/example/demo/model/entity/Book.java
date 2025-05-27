@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Book {
-	@Id
+	@Id // 主鍵
 	private Integer bookId; // 書號
 	private String bookName; // 書名
 	private Integer bookPrice; // 價格

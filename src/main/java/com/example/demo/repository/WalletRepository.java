@@ -17,6 +17,8 @@ public interface WalletRepository extends JpaRepository<Wallet, String> {
 	Integer getWalletBalance(String username);
 
 	// 更新餘額
+	// set 是 SQL 中 UPDATE 語句的一部分，意思是「設定某個欄位的新值」
+	// 錢包餘額 = 原本餘額 - 書本價格
 	@Modifying
 	@Transactional
 	@Query(value = "update wallet set balance = balance - :bookPrice where username = :username", nativeQuery = true)
